@@ -4,8 +4,10 @@ class Portfolio < ApplicationRecord
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   include Placeholder
-
   validates_presence_of :title, :body, :main_image, :thumbnail_image 
+
+  mount_uploader :thumbnail_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
 
   # THis is good because it keeps all of the database logic in the model rather than making these calls in the controller
   def self.vue
