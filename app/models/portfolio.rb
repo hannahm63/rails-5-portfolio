@@ -7,7 +7,10 @@ class Portfolio < ApplicationRecord
 
   validates_presence_of :title, :body, :main_image, :thumbnail_image 
 
-  # THis is good because it keeps all of the database logic in the model rather than making these calls in the controller
+  mount_uploader :thumbnail_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
+  # This is good because it keeps all of the database logic in the model rather than making these calls in the controller
   def self.vue
     where(subtitle: 'Vue')
   end
