@@ -157,3 +157,13 @@ body {
   background: rgba(0, 0, 0, 0.3);
   padding: 20px;
 }
+
+.tech-news a {
+  color: forestgreen; 
+}
+
+.tech-news > .card-body {
+  background: white;
+  margin: 10px;
+  padding: 30px;
+}
