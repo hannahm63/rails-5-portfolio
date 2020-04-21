@@ -107,9 +107,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 /*
  * Cusotm Styles
  */
+.comment-card > .card-body {
+  margin-top: 15px;
+}
 
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+  padding-top: 5px;
+}
